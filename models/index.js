@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const db = {};
 
-const sequelize = new Sequelize(process.env.SUPABASE_URL)
+const sequelize = new Sequelize(process.env.SUPABASE_URL, { dialectModule: pg })
 
 // const sequelize = new Sequelize(
 //        mysqlConfig.DB,
